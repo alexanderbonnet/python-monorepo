@@ -14,6 +14,7 @@ black = "^23.1.0"
 ruff = "^0.0.254"
 mypy = "^1.1.1"
 taskipy = "^1.10.3"
+pytest = "^7.2.2"
 
 [tool.isort]
 profile = "black"
@@ -21,7 +22,7 @@ profile = "black"
 [tool.taskipy.tasks]
 check-format = "isort --check . && black --check ."
 format = "isort . && black ."
-lint = "ruff --check ."
+lint = "ruff check ."
 typing = "mypy ."
 test = "pytest ."
 

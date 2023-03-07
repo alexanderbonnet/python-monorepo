@@ -21,7 +21,7 @@ profile = "black"
 [tool.taskipy.tasks]
 check-format = "isort --check . && black --check ."
 format = "isort . && black ."
-lint = "ruff --check ."
+lint = "ruff check ."
 typing = "mypy ."
 test = "pytest ."
 
