@@ -1,0 +1,16 @@
+name: Static analysis - app
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "app/**"
+      - ".github/workflows/app*"
+      - ".github/workflows/reusable*"
+
+jobs:
+  static-analysis:
+    uses: ./.github/workflows/reusable-static-analysis.yaml
+    with:
+      workdir: app
