@@ -1,0 +1,15 @@
+name: Static analysis - core
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "core/**"
+      - ".github/workflows/core*"
+
+jobs:
+  code-checking:
+    uses: ./.github/workflows/reusable-static-analysis.yaml
+    with:
+      workdir: core
