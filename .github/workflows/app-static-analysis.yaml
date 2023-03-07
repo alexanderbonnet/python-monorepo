@@ -7,6 +7,7 @@ on:
     paths:
       - "app/**"
       - ".github/workflows/app*"
+      - ".github/workflows/reusable*"
 
 jobs:
   static-analysis:
