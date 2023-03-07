@@ -25,11 +25,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-      - name: Check formatting
+      - name: Check linting
+        working-directory: ${{ inputs.workdir }}
         run: poetry run task lint
-      - name: Check linter
+      - name: Check formatting
+        working-directory: ${{ inputs.workdir }}
         run: poetry run task check-format
       - name: Check typing
+        working-directory: ${{ inputs.workdir }}
         run: poetry run task typing
       - name: Test with pytest
+        working-directory: ${{ inputs.workdir }}
         run: poetry run task test
