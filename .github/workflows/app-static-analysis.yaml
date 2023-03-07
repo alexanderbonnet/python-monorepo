@@ -9,7 +9,7 @@ on:
       - ".github/workflows/app*"
 
 jobs:
-  code-checking:
+  static-analysis:
     uses: ./.github/workflows/reusable-static-analysis.yaml
     with:
       workdir: app
