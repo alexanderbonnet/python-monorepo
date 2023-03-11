@@ -1,5 +1,6 @@
-from core.datamodels import CircleV0
 import math
+
+from core.datamodels import CircleV0
 
 
 def test_circle_v0() -> None:
