@@ -6,6 +6,7 @@ on:
       - "**"
     paths:
       - "app/**"
+      - "core/**"
       - ".github/workflows/app*"
       - ".github/workflows/reusable*"
 
